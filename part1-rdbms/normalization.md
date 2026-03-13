@@ -2,7 +2,7 @@
 
 1. Insert Anomaly:
 In datasets/orders_flat.csv, product information is stored along with order information.
-Example - If the company needs to add a new product like a keyboard to the system, they cannot do so without an order_id and a customer_id. In the CSV there is no way to record the product P009 unless there is some associated order_id. You have to leave order_id and customer_id as null.
+###Example - If the company needs to add a new product like a keyboard to the system, they cannot do so without an order_id and a customer_id. In the CSV there is no way to record the product P009 unless there is some associated order_id. You have to leave order_id and customer_id as null.
 Columns: product_id, product_name, order_id
 
 2. Update Anomaly:
