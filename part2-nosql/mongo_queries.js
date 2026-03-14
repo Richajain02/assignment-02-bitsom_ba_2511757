@@ -4,7 +4,7 @@ db.products.insertMany([
 {
   "product_name": "Wireless Headphones",
   "category": "Electronics",
-  "price": 3200,
+  "price": 25000,
   "brand": "Sony",
   "specifications": {
     "battery_life": "30 hours",
@@ -34,22 +34,25 @@ db.products.insertMany([
   }
 },
 {
-  "product_name": "Premium Notebook Pack",
-  "category": "Stationery",
-  "price": 120,
-  "brand": "Classmate",
+  "product_name": "Organic Milk Pack",
+  "category": "Groceries",
+  "price": 150,
+  "brand": "Amul",
+  "expiry_date": "2024-12-20",
   "pack_details": {
-    "notebooks_in_pack": 5,
-    "pages_per_notebook": 200
+    "quantity": "1 litre",
+    "type": "Full Cream"
   },
-  "paper_quality": "High GSM",
-  "available_sizes": ["A4", "A5"],
+  "storage_instructions": [
+    "Keep Refrigerated",
+    "Consume within 2 days after opening"
+  ],
   "ratings": {
-    "average": 4.7,
-    "reviews_count": 90
+    "average": 4.6,
+    "reviews_count": 210
   }
 }
-])
+]);
 
 // OP2: find() — retrieve all Electronics products with price > 20000
 
