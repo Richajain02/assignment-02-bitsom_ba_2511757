@@ -65,8 +65,8 @@ db.products.find({
 
 db.products.find({
   category: "Groceries",
-  expiry_date: { $lt: new Date("2025-01-01") }
-});
+  expiry_date: { $lt: "2025-01-01" }
+})
 
 
 // OP4: updateOne() — add a "discount_percent" field to a specific product
