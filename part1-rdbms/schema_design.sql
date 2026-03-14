@@ -45,13 +45,13 @@ INSERT INTO Customers VALUES ('C001', 'Rohan Mehta', 'rohan@gmail.com', 'Mumbai'
 INSERT INTO Customers VALUES ('C002', 'Priya Sharma', 'priya@gmail.com', 'Delhi');
 INSERT INTO Customers VALUES ('C003', 'Amit Verma', 'amit@gmail.com', 'Bangalore');
 INSERT INTO Customers VALUES ('C004', 'Sneha Iyer', 'sneha@gmail.com', 'Chennai');
-INSERT INTO Customers VALUES ('C005', 'Vikram Singh', 'vikram@gmail.com', 'Mumbai');   
+INSERT INTO Customers VALUES ('C005', 'Vikram Singh', 'vikram@gmail.com', 'Mumbai');  
 
 INSERT INTO Products VALUES ('P004', 'Notebook', 'Stationery', 120.00);
 INSERT INTO Products VALUES ('P007', 'Pen Set', 'Stationery', 250.00);
 INSERT INTO Products VALUES ('P005', 'Headphones', 'Electronics', 3200.00);
 INSERT INTO Products VALUES ('P003', 'Desk Chair', 'Furniture', 8500.00);
-INSERT INTO Products VALUES ('P006', 'Standing Desk', 'Furniture', 22000.00);   
+INSERT INTO Products VALUES ('P006', 'Standing Desk', 'Furniture', 22000.00);  
 
 INSERT INTO Sales_reps VALUES ('SR01', 'Deepak Joshi', 'deepak@corp.com', 'Mumbai HQ, Nariman Point, Mumbai - 400021');
 INSERT INTO Sales_reps VALUES ('SR02', 'Anita Desai', 'anita@corp.com', 'Delhi Office, Connaught Place, New Delhi - 110001');
@@ -64,4 +64,3 @@ INSERT INTO Orders VALUES ('ORD1114', 'C001', 'P007', 'SR01', 2, '2023-08-06');
 INSERT INTO Orders VALUES ('ORD1153', 'C003', 'P007', 'SR01', 3, '2023-02-14');
 INSERT INTO Orders VALUES ('ORD1002', 'C002', 'P005', 'SR02', 1, '2023-01-17');
 INSERT INTO Orders VALUES ('ORD1118', 'C005', 'P007', 'SR02', 5, '2023-11-10');  
-  
