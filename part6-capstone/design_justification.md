@@ -1,4 +1,4 @@
-##Storage Systems
+## Storage Systems
 
 To support the hospital’s four goals, a combination of specialized storage systems is used.  
 For predicting patient readmission risk, historical treatment and patient records are stored in a Data Lake (for example, S3 or HDFS). The data lake stores raw medical records, lab reports, and treatment histories in scalable storage. This data is later processed using ML pipelines to train predictive models that estimate the probability of patient readmission.  
@@ -7,10 +7,10 @@ For management reporting, a Data Warehouse (such as Snowflake, BigQuery, or Amaz
 For real-time ICU vitals streaming, a time-series database such as InfluxDB or TimescaleDB is used. ICU monitoring devices continuously stream data like heart rate, oxygen level, and blood pressure. A streaming platform such as Kafka ingests the data and stores it in the time-series database optimized for high-frequency sensor data.  
 Together, these systems create a scalable architecture capable of supporting transactional workloads, real-time monitoring, advanced analytics, and machine learning.
 
-##OLTP vs OLAP Boundary
+##  OLTP vs OLAP Boundary
 
 In this architecture, the OLTP layer includes systems responsible for real-time patient data entry and operational tasks. This includes the hospital’s Electronic Health Record (EHR) database, where doctors and nurses record treatments, diagnoses, prescriptions, and patient details. The time-series database used for ICU vitals also belongs to the operational layer because it stores continuously generated monitoring data.  
 The OLAP layer begins when data is extracted from operational systems for analytical purposes. ETL pipelines periodically move data from the EHR database and the time-series database into the data lake and the data warehouse. Once data enters the warehouse, it is optimized for analytical queries rather than transactional operations. The machine learning pipeline that predicts patient readmission risk operates on the analytical layer. Similarly, management dashboards and monthly reporting systems query the data warehouse rather than the transactional databases. This separation ensures that heavy analytical queries do not impact the performance of critical hospital operations.
 
-##Trade-offs
+##  Trade-offs
 One significant trade-off in this architecture is the increased system complexity caused by using multiple storage systems. Managing an OLTP database, data lake, time-series database, streaming system, and data warehouse requires careful integration, monitoring, and maintenance. This complexity can lead to higher operational costs and potential data consistency challenges between systems. For example, delays in ETL pipelines could result in reporting data that is slightly outdated compared to the operational databases. To mitigate this trade-off, the system can implement automated data pipelines and orchestration tools such as Apache Airflow. These tools ensure reliable scheduling, monitoring, and error handling for data movement between systems. Additionally, implementing data governance and metadata management helps maintain consistency and traceability across all storage layers. By automating data workflows and maintaining strong monitoring practices, the benefits of scalability, real-time monitoring, and advanced analytics can be achieved while minimizing operational complexity.
